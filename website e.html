@@ -1,0 +1,1088 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+
+.fa {
+  padding: 10px;
+  font-size: 15px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+text-align:center;
+
+justify-content:center;
+margin:0 auto;
+
+
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+
+
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 1, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+float:left;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.filterDiv {
+    
+    margin:2px;
+margin-left:2px;
+    
+    display: none; /* Hidden by default */
+}
+button:hover, a:hover {
+  opacity: 0.5;
+}
+
+.container1{
+    overflow: hidden;
+    
+}
+
+
+
+.show {
+    display: block;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  
+}
+.btn:hover {
+  background-color: #ddd;
+}
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+
+
+
+
+#search{
+width:300px;
+float:left;
+padding: 20px;
+margin-left: 300px;
+}
+
+
+.search-area{
+width:225px;
+height:35px;
+background:#fff;
+border:none;
+border-radius: 10px;
+float:left;
+padding-left:15px;
+margin-top:-7px;
+margin-left: -250px;
+}
+.search-btn{
+width:75px;
+height:38px;
+border-radius: 10px;
+border:none;
+color:#fff;
+background:red;
+margin-left: -75px;
+margin-top:-7px;
+
+}
+
+
+
+.navbar{
+background-color:#ff1493;
+overflow:hidden;
+height:60px;
+margin-top:-8px;
+margin-left:-8px;
+padding:8px;
+width:100%;
+
+}
+.navbar a{
+float:left;
+display:block;
+color;#f2f2f2;
+text-align:center;
+padding:14px 10px;
+text-decoration:none;
+font-size:18px;
+}
+.navbar ul{
+margin:8px 0px 0px 0px;
+list-style:none;
+
+}
+
+.navbar a:hover{
+font-size:23px;
+color:#fff;
+
+transition: all .5s ease;
+}
+
+.side-nav{
+height:100%;
+width:0;
+position:fixed;
+z-index:1;
+top:0;
+left:0;
+background-color:#111;
+opacity:0.9;
+overflow-x:hidden;
+padding-top:60px;
+transition:0.5s;
+}
+.side-nav a{
+padding:10px 10px 10px 30px;
+text-decoration:none;
+font-size:22px;
+color:#ccc;
+display:block;
+transition:0.3s;
+
+}
+.side-nav a:hover{
+color:#fff;
+font-size:28px;
+}
+.side-nav .btn-close{
+position:absolute;
+top:0;
+right:22px;
+font-size:36px;
+margin-left:50px;
+}
+#main{
+transition:margin-left 0.5s;
+padding:20px 0px;
+overflow:hidden;
+width:100%;
+
+}
+
+
+
+
+
+#container{
+width:1007px;
+overflow:hidden;
+margin: -8px;
+}
+.btn-group button {
+    
+    border: 1px solid white; 
+    color: white; 
+    padding: 10px 24px; 
+    cursor: pointer; 
+    float: left; 
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; 
+}
+
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group button:hover {
+    background-color: #3e8e41;
+}
+
+.slider{
+position:relative;
+width:3072px;
+animation-name:slideranimation;
+animation-duration:15s;
+animation-iteration-count:infinite;
+margin:0;
+}
+
+.slider img{
+float:left;
+margin-top: -8px;
+margin: 0;
+}
+@keyframes slideranimation{
+
+0%
+{left:0px;}
+20%
+{left:0px;}
+25%
+{left:-1024px;}
+45%
+{left:-1024px;}
+50%
+{left:-2048px;}
+70%
+{left:-2048px;}
+}
+
+
+
+
+@media only screen and (max-width: 992px) {
+body{
+background-color:#f1f1f1;}
+#search{
+width:100%;
+}
+#search{
+visibility:hidden;
+}
+
+.myBtnContainer{
+<br>
+}
+.card{
+width:100%;
+padding:0px;
+margin: 0 auto;
+}
+.navbar{
+width:100%;
+}
+#container{
+width:100%;
+height:100%;
+visibility: hidden;
+
+}
+
+#container,.slider{
+visibility:hidden;
+}
+
+}
+
+@media only screen and (max-width: 600px) {
+
+.card{
+width:100%;
+margin: 0 auto;
+}
+
+
+}
+</style>
+</head>
+<title>E-Commerce website</title>
+<body >
+
+<nav class="navbar">
+
+<span class="open-slide">
+
+<a href="#" onclick="openslidemenue()">
+<svg width="30" height="30">
+<path d="M0,5 30,5" stroke="#fff"
+stroke-width="5"/>
+<path d="M0,14 30,14" stroke="#fff"
+stroke-width="5"/>
+<path d="M0,23 30,23" stroke="#fff"
+stroke-width="5"/>
+
+
+
+</svg>
+</a>
+</span>
+
+<div>
+<div>
+<img 
+style="width:40px;height:40px;padding:10px 5px 10px 5px;"src="http://i65.tinypic.com/105z6tu.jpg" border="0" alt="Image" align="left">
+</div>
+
+<div style="float:left;font-size:25px;color:white;padding:16px 3px 14px 3px;">
+<b>Shopping Basket</b>
+</div>
+</div>
+
+<div id="search">
+<form action="">
+   <input class="search-area" type="text" name="text" placeholder="search here">
+<input class="search-btn"  type="submit" name="submit" value="SEARCH">
+</form>
+
+</div>
+
+
+
+<ul style="border-left: 1px solid black;" "class="navbar.nav">
+
+<li><a href="https://play.google.com/store?hl=en"> App</a></li>
+
+
+</ul>
+<br style="clear:left;">
+
+</nav>
+
+
+
+<div id="side-menue" class="side-nav">
+ <a href="#" class="btn-close" onclick="closeslidemenue()">&times;</a>
+<a href="tutorial.html">Home</a>
+<a href="#">My account</a>
+<a href="#<div id="myBtnContainer">
+  <a class="btn active" onclick="filterSelection('all')"> All categories</a>
+
+  <a class="btn" onclick="filterSelection('accessories')"><b> Accessories </b></button>
+  <a class="btn" onclick="filterSelection('baby&kids')"> <b>Baby & Kids</b></a>
+  <a class="btn" onclick="filterSelection('books')"> <b>Books</b></a>
+  <a class="btn" onclick="filterSelection('furniture')"> <b>Furniture</b></a>
+<a class="btn" onclick="filterSelection('mobile')"> <b>Mobile</b></a>
+</a>
+<a href="#">Help</a>
+<a href="#">Contact</a>
+</div>
+
+
+
+<script>
+function openslidemenue(){
+document.getElementById('side-menue').style.width='250px';
+document.getElementById('main').style.marginleft='250px';
+}
+
+function closeslidemenue(){
+document.getElementById('side-menue').style.width='0px';
+document.getElementById('main').style.marginleft='0px';
+}
+</script>
+
+
+<div id="main">
+<marquee>Welcome to shopping basket!</marquee>
+</div>
+
+
+
+
+<div  id="myBtnContainer">
+<div class="btn-group">
+  <button style=" " class="btn active" onclick="filterSelection('all')"> Show all categories</button>
+
+  <button style="background-color:#00bfff;" class="btn" onclick="filterSelection('accessories')"> Accessories</button>
+
+ <button style=" background-color: #00bfff;" class="btn" onclick="filterSelection('baby&kids')"> Baby & Kids</button>
+
+ <button style=" background-color: #00bfff;" class="btn" onclick="filterSelection('books')"> Books</button>
+
+ <button style="
+ 
+  color: white;
+  background-color: #00bfff;
+ " class="btn" onclick="filterSelection('furniture')"> Furniture</button>
+
+<button style="
+  background-color: #00bfff;
+  " class="btn" onclick="filterSelection('mobile')"> Mobile </button>
+</div>
+
+<br>
+<div class="container1">
+<div class="filterDiv accessories">
+<div class="card">
+<img src="http://i66.tinypic.com/1zyablz.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Bangles</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.300</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;" class="filterDiv furniture">
+<div class="card">
+<img src="http://i63.tinypic.com/20gdzbt.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Bed</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.10,000</button></p>
+</div>
+
+</div>
+
+<div style="margin-left:0px;" class="filterDiv baby&kids">
+<div class="card">
+<img src="http://i65.tinypic.com/w221l2.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Wadrobe</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.1000</button></p>
+</div>
+
+</div>
+
+
+<div style="margin-left:0px;"class="filterDiv books">
+<div class="card">
+<img src="http://i66.tinypic.com/357irmd.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Wings of fire</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.300</button></p>
+</div>
+
+</div>
+
+<div style="margin-left:0px;"class="filterDiv mobile">
+<div class="card">
+<img src="http://i66.tinypic.com/j8elja.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Apple iphone</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.40,000</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv furniture">
+<div class="card">
+<img src="http://i64.tinypic.com/30rxlds.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Sofa sets</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.7,000</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv accessories">
+<div class="card">
+<img src="http://i68.tinypic.com/ajv47q.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Bracelets</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.100</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv books">
+<div class="card">
+<img src="http://i68.tinypic.com/fodj44.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Harry potter books</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.2000</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv mobile">
+<div class="card">
+<img src="http://i67.tinypic.com/15rl0t1.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Redmi note5</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.15,000</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv baby&kids">
+<div class="card">
+<img src="http://i67.tinypic.com/345br77.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Baby toys</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.250</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv furniture">
+<div class="card">
+<img src="http://i64.tinypic.com/othevn.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Chair</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.4000</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv books">
+<div class="card">
+<img src="http://i66.tinypic.com/303ke2w.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Half girl friend</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.350</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv mobile">
+<div class="card">
+<img src="http://i66.tinypic.com/98so5y.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Oppo</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.15,000</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv accessories">
+<div class="card">
+<img src="http://i66.tinypic.com/29wsgz.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Sun Glasses</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.1,500</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv baby&kids">
+<div class="card">
+<img src="http://i68.tinypic.com/ei8hup.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Kids slippers</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.250</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv accessories">
+<div class="card">
+<img src="http://i63.tinypic.com/29n7z1u.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Nose ring</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.300</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv furniture">
+<div class="card">
+<img src="http://i67.tinypic.com/30namie.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Table</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.6,000</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv baby&kids">
+<div class="card">
+<img src="http://i63.tinypic.com/207410w.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Hairbands</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.100</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv books">
+<div class="card">
+<img src="http://i68.tinypic.com/35jkymc.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Ponniyin selvan</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.1,500</button></p>
+</div>
+</div>
+
+
+<div style="margin-left:0px;"class="filterDiv mobile">
+<div class="card">
+<img src="http://i67.tinypic.com/8y6eer.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Lenovo k8</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.15,000</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv furniture">
+<div class="card">
+<img src="http://i68.tinypic.com/20f3gwn.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Bench</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.10,000</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv accessories">
+<div class="card">
+<img src="http://i65.tinypic.com/30kzujl.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Fastrack watch</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.2000</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv books">
+<div class="card">
+<img src="http://i65.tinypic.com/wbc54w.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Lord of the flies</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.500</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv mobile">
+<div class="card">
+<img src="http://i66.tinypic.com/a9o6s7.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Nokia 8</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.13,000</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv baby&kids">
+<div class="card">
+<img src="http://i65.tinypic.com/oqg404.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Baby lotion</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.500</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv accessories">
+<div class="card">
+<img src="http://i65.tinypic.com/2ltj5gg.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>Bag</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.200</button></p>
+</div>
+</div>
+
+<div style="margin-left:0px;"class="filterDiv books">
+<div class="card">
+<img src="http://i65.tinypic.com/rlyofc.jpg" alt="Image" style="width:300px;height:300px;">
+  
+  <h1>The famous five</h1>
+  <p class="title">Offer 50%</p>
+  <p>Festival time sale</p>
+
+ <p><button style="border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;">Buy rs.500</button></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+}
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1); 
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+
+</script>
+
+<br>
+
+<div id="container">
+<div class="slider">
+
+<img
+style="width:1024px;height:550px;margin-top: -8px;" src="http://i66.tinypic.com/15wx7h0.jpg" border="0" alt="Image slider">
+
+<img
+style="width:1024px;height:550px;"
+src="http://i67.tinypic.com/wuo5rk.jpg" border="0" alt="Image slider">
+
+<img
+style="width:1024px;height:550px;"src="http://i68.tinypic.com/2n1vu9.jpg" border="0" alt="Image slider">
+
+</div>
+</div>
+
+
+<br>
+<br>
+<div align="center">
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-snapchat-ghost"></a>
+</div>
+<br>
+<footer style="padding=1em;color:white;background-color:black;clear:left;text-align:center;"> Copyright &copy;shoppingbasket.com</footer>
+
+
+
+</body>
+</html>
